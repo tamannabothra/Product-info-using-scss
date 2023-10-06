@@ -1,0 +1,312 @@
+@import 'navbar';
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+// Hero Section CSS
+.hero {
+  background-color: $dark;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      height: 100%;
+    }
+
+    &--left {
+      width: 100%;
+      line-height: 1.2;
+
+      @include tablet {
+        padding: 5rem 0;
+      }
+
+      @include mobile {
+        line-height: 1.5;
+      }
+    }
+
+    &--left h1 {
+      font-size: 4rem;
+      color: white;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--left h2 {
+      font-size: 4rem;
+      color: white;
+
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+
+    &--left h3 {
+      font-size: 4rem;
+      color: white;
+
+      @include mobile {
+        font-size: 2.5rem;
+      }
+    }
+
+    &--left p {
+      font-size: 2rem;
+      color: white;
+      background-color: $light;
+      margin-top: 1rem;
+      font-weight: 600;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--btn {
+      font-size: 1rem;
+      background-color: $lime;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 4px;
+      color: $light;
+      margin-top: 2rem;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s;
+      outline: none;
+    }
+
+    &--btn a {
+      position: relative;
+      z-index: 2;
+      color: $light;
+      text-decoration: none;
+    }
+
+    &--btn:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: $orangeRed;
+      transition: all 0.3s;
+      border-radius: 4px;
+    }
+
+    &--btn:hover:after {
+      width: 100%;
+    }
+
+    &--right {
+      text-align: center;
+    }
+
+    &--img {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      
+    }
+    
+  }
+}
+
+
+//for right side
+.hero {
+  background-color: $light;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 24px;
+    padding-left: 24px;
+    text-align: left;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      height: 100%;
+    }
+  &--right {
+  width: 100%;
+  line-height: 1.2;
+
+  @include tablet {
+    padding: 5rem 0;
+  }
+
+  @include mobile {
+    line-height: 1.5;
+  }
+}
+
+&--right h1 {
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+
+  @include mobile {
+    font-size: 1.5rem;
+  }
+}
+
+&--right h2 {
+  font-size: 4rem;
+  color: whitw;
+
+  @include mobile {
+    font-size: 2rem;
+  }
+}
+
+&--right h3 {
+  font-size: 2rem;
+  color: rgb(222, 248, 233);
+
+  @include mobile {
+    font-size: 1.5rem;
+  }
+}
+
+&--right p {
+  font-size: 2rem;
+  color: white;
+  background-color: $light;
+  margin-top: 1rem;
+  margin-right: 10%;
+  margin-left: 10%;
+  font-weight: 500;
+  text-align:justify;
+
+
+  @include mobile {
+    font-size: 1.5rem;
+  }
+}
+
+&--btn {
+  font-size: 1rem;
+  background-color: $lime;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 4px;
+  color: $light;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  outline: none;
+}
+
+&--btn a {
+  position: relative;
+  z-index: 2;
+  color: $light;
+  text-decoration: none;
+}
+
+&--btn:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: $orangeRed;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+
+&--btn:hover:after {
+  width: 100%;
+}
+
+&--left {
+  text-align: left;
+}
+
+&--img {
+  height: 400px;
+  width: 600px;
+ justify-self: start;
+  
+}
+  }
+}
+
+
+.hero__container--imgs{
+  text-align: center;
+  width: 300px;
+  height: 300px;
+}
+
+
+.hero__container--li ul li {
+  text-align: left; 
+}
+
+.product-footer {
+  background-color: #333; 
+  color: #fff; 
+  padding: 20px; 
+  text-align: center; 
+  font-size: 16px; 
+
+  
+}
+
+
+.product-footer a {
+  color: #fff; 
+  text-decoration: none; 
+  margin: 0 10px; 
+}
+
+
+.social-icons 
+  i {
+    width: 2%;
+    height:2%; 
+    color: #0073e6; 
+    margin-right: 10px; 
+  }
+
+
+
+@media (max-width: 768px) {
+  .product-footer {
+    font-size: 14px; 
+  }
+}
+
